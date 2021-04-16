@@ -22,12 +22,14 @@ Create a JSON file called blocklist.json in one of the following locations:
  - $HOME/blocklist.json
  - "Right next to the script"
 
-Its format is pretty simple. Key is the URL of the list, the value is the name of the ipset it creates.
+Its format is pretty simple. Key is the URL of the blocklist, the value is the name of the ipset it creates from the blocklist.
 
 ```json
+{
     "https://lists.blocklist.de/lists/ssh.txt" : "blocklist-ssh",
     "https://lists.blocklist.de/lists/80.txt" : "blocklist-80",
     "https://lists.blocklist.de/lists/443.txt" : "blocklist-443"
+}
 ```
 
 You can find further readily available blocklists on the following sites.
