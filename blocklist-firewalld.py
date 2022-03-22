@@ -61,7 +61,7 @@ if __name__ == "__main__":
         for list in lists:
             rc = runcmd("Checking : " + lists[list],
                 'firewall-cmd --info-ipset '+lists[list], "no")
-            if rc[0] =! '0':
+            if rc[0] != '0':
                 runcmd("Creating ipset for " + lists[list], "firewall-cmd --permanent --new-ipset=" + lists[list] + " --type=hash:net --option=family=inet --option=hashsize=4096 --option=maxelem=200000", "no")
                 runcmd("Setting policy to drop ", "firewall-cmd --permanent --zone=drop --add-source=ipset:"+lists[list], "no")
 
